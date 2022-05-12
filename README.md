@@ -85,7 +85,7 @@ jsb.bridge.onNative = (methodName: string, message?: string | null) => {
 
 [Example Code](https://github.com/vtv24/react-native-cocos-example)
 
-[Assets Example](https://vtv24.github.io/cdn/test/test.zip)
+[Assets Example](https://vtv24.github.io/cdn/test/assets.zip)
 ```
 //button 1
 eventName:  "COCOS_MAX_API"
