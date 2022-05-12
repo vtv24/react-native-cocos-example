@@ -72,3 +72,4 @@ jsb.bridge.onNative = (methodName: string, message?: string | null) => {
 ```
 
 [Example](https://github.com/vtv24/react-native-cocos-example)
+[Assets Example](https://vtv24.github.io/cdn/test/test.zip)
