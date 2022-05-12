@@ -23,13 +23,13 @@ const useDownloadAssets = () => {
 
             // RETURN ASSETS PATH
             return assetsBaseFolder.current + 'assets/';
-        } catch (err) {
+        } catch (err: any) {
             Alert.alert('Error', err.message);
             return null;
         }
     };
 
-    const downloadFile = async gameId => {
+    const downloadFile = async (gameId: string) => {
         const isExist = await RNFS.exists(assetsBaseFolder.current + 'assets/');
         const destination = assetsBaseFolder.current + 'assets.zip';
 

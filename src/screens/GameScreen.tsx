@@ -19,17 +19,17 @@ const GameScreen: FC<any> = ({route, navigation}) => {
         switch (event.func) {
             case 'goBack':
                 navigation.goBack();
+                break;
+            case 'requestLocation':
+                cocosBridge.emit('COCOS_MAX_API', JSON.stringify({func: 'responseLocation', data: {latitude: '123', longitude: '456'}}));
+                break;
         }
     };
 
     return (
         <View style={{flex: 1, backgroundColor: 'red'}}>
-            <StatusBar
-                translucent
-                backgroundColor="rgba(0, 0, 0, 0.20)"
-                animated
-            />
-            <CocosView assetsPath={route.params.path} />
+            <StatusBar translucent backgroundColor="rgba(0, 0, 0, 0.20)" animated />
+            <CocosView params={{}} moduleName="game-module" assetsPath={route.params.path} />
         </View>
     );
 };
